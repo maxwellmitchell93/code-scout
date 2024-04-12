@@ -10,7 +10,8 @@ function handleSubmitForm(event) {
 
     if(searchInputVal) {
         //call another function
-        // googleApi(searchInputVal);
+        googleApi(searchInputVal);
+        // youtubeApi(searchInputVal);
     } else {
         alert('Please enter a topic');
     }
@@ -18,14 +19,21 @@ function handleSubmitForm(event) {
 }
 
 function googleApi(search) {
-
+    const api = fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyCiWEy9xURJ4OigfMcWMfi22poa1cD3kew&cx=95938830dbc574f09&q=${search}`);
+    // gather data from fetch
+    // store into variable
+    // pass variables into a function to render on the page
 }
 
 function youtubeApi(search) { 
-
+    // gather data from fetch
+    // store into variable
+    // pass variables into a function to render on the page
 }
 
-const api = fetch('https://www.googleapis.com/customsearch/v1?key=AIzaSyCiWEy9xURJ4OigfMcWMfi22poa1cD3kew&cx=95938830dbc574f09&q=html')
+function renderGoogleSearch() {
+    //render googles search links on page
+}
 
 
 searchFormEl.addEventListener('submit', handleSubmitForm);
