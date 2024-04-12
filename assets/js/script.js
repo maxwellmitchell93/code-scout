@@ -25,7 +25,7 @@ function youtubeApi(search) {
 
 }
 
-// const api = fetch('https://www.googleapis.com/customsearch/v1?key=AIzaSyCiWEy9xURJ4OigfMcWMfi22poa1cD3kew')
+const api = fetch('https://www.googleapis.com/customsearch/v1?key=AIzaSyCiWEy9xURJ4OigfMcWMfi22poa1cD3kew&cx=95938830dbc574f09&q=html')
 
 
 searchFormEl.addEventListener('submit', handleSubmitForm);
