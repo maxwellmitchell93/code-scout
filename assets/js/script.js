@@ -11,7 +11,7 @@ function handleSubmitForm(event) {
     if(searchInputVal) {
         //call another function
         googleApi(searchInputVal);
-        // youtubeApi(searchInputVal);
+        youtubeApi(searchInputVal);
     } else {
         alert('Please enter a topic');
     }
@@ -20,6 +20,7 @@ function handleSubmitForm(event) {
 
 function googleApi(search) {
     const api = fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyCiWEy9xURJ4OigfMcWMfi22poa1cD3kew&cx=95938830dbc574f09&q=${search}`);
+    const youtubeSeachApi = fetch(`https://www.googleapis.com/youtube/v3/search&part=snippet&key=AIzaSyCmgmCqfy810RN_DSYuppQL0stf-5exBaU&type=video&q=${search}`);
     // gather data from fetch
     // store into variable
     // pass variables into a function to render on the page
