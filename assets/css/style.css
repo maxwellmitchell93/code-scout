@@ -1,13 +1,4 @@
 
-.container h1 {
-   text-align: center;
-   color: #fff;
-   font-family: "Open Sans", sans-serif;
-   
-}
-body{
-    background-color: rgb(67, 67, 67);
-}
 .submitbtn{
     cursor: pointer;
 }
