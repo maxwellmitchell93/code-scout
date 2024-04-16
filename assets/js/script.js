@@ -2,6 +2,7 @@ const searchButtonEl = document.querySelector('.submitbtn');
 const userInputEl = document.querySelector('#issueinput');
 const searchFormEl = document.querySelector('#searchForm');
 const googleSearchEl = document.querySelector('.google-search-input');
+const youtubeContainerEl = document.querySelector('.youtube-container');
 const googleApiKey = 'AIzaSyCiWEy9xURJ4OigfMcWMfi22poa1cD3kew'
 const youtubeApiKey = 'AIzaSyCmgmCqfy810RN_DSYuppQL0stf-5exBaU'
 
@@ -43,7 +44,8 @@ function youtubeApi(search) {
             .then(function(response) {
                 response.json().then(function (data) {
                     console.log(data);
-                    // remder youtube video
+                    renderYoutubeVideo(data);
+                    // render youtube video
                 })
             })
     // gather data from fetch
@@ -65,5 +67,16 @@ function renderGoogleSearch(data) {
     }
 }
 
+function renderYoutubeVideo(data) {
+    youtubeContainerEl.innerHTML = "";
+    let videos = data.items
+    console.log(videos);
+    for(let i= 0; i< videos.length; i++) {
+        youtubeContainerEl.innerHTML += ` 
+            <h3>${videos[i].snippet.title}</h3>
+            <a href="https://www.youtube.com/watch?v=${videos[i].id.videoId}"><img src = "${videos[i].snippet.thumbnails.default.url}"/></a>
+        `
+    }
+}
 
 searchFormEl.addEventListener('submit', handleSubmitForm);
