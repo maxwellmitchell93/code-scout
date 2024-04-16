@@ -4,16 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./Tailwindcss/style.css">
-<link rel ="stylesheet" href="./assets/css/style.css">
-
-        
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
     <body class="bg-slate-500">
-    <h1 class="text-green-400 font-bold text-center text-9xl">Code Scout</h1>
+        <header class=" text-green-400 py-6 ">
+            <div class="container mx-auto px-5 ">
+                <h1 class ="text-9xl text-center ">Code Scout</h1>
+            </div> 
+        </header>
         
 
         <main>
@@ -21,7 +23,7 @@
                 
                 <form id="searchForm">
                     <input type="text" id="issueinput" placeholder="Enter your issue"><br><br>
-                    <button type="submit" class="submitbtn">Search</button>
+                    <button type="submit" class="submitbtn ring-2 ring-pink-500 ring-inset">Search</button>
                 </form>
 
                 <div class="search-history-container"> 
