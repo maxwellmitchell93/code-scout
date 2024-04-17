@@ -75,7 +75,7 @@ function renderYoutubeVideo(data) {
     for(let i= 0; i< videos.length; i++) {
         youtubeContainerEl.innerHTML += ` 
             <h3>${videos[i].snippet.title}</h3>
-            <a href="https://www.youtube.com/watch?v=${videos[i].id.videoId}"><img src = "${videos[i].snippet.thumbnails.medium.url}"/></a>
+            <iframe class="w-full h-36" src="https://www.youtube.com/embed/${videos[i].id.videoId}" frameborder="0" allowfullscreen></iframe>
         `
     }
 }
