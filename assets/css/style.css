@@ -17,6 +17,12 @@ header h1 {
     color: var(--green)
 }
 
+h1 img {
+    height: 60px;  
+    width: 60px;
+    float: right;
+}
+
 #gitHubIcon {
     display: flex;
     justify-content: end;
@@ -31,26 +37,72 @@ main {
 
 .code-scout-logo{
     height: 100%;
-    display: table;
+    display: flex;
     width: 100%;
+    align-items: center;
 }
 
 .code-scout-logo h1{
+    color: var(--green);
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'JetBrains Mono', sans-serif;
+    
+}
+
+.code-scout-logo h1 p {
+    float: left;
+}
+
+.submitbtn{
+    cursor: pointer;
+    font-weight: 400;
+    font-family: 'JetBrains Mono', sans-serif;
+}
+.submitbtn:hover{
+    color: var(--green)
+}
+
+::placeholder {
+    font-weight: 400;
+    font-family: 'JetBrains Mono', sans-serif;
+}
+
+.card {
+    /* border-color: var(--green); */
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    background-color: var(--slate);
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 10px var(--green);
+}
+
+ .card-header h2 {
+    color: var(--green);
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'JetBrains Mono', sans-serif;
+} 
+
+.card-body {
     color: var(--green);
     font-size: 24px;
     font-weight: 400;
     font-family: 'JetBrains Mono', sans-serif;
 }
 
-.submitbtn{
-    cursor: pointer;
-}
-.submitbtn:hover{
-    color: var(--green)
+.youtube-container h3 {
+    font-weight: 400;
+    font-family: 'JetBrains Mono', sans-serif;
 }
 
+
 .footerContainer {
-    
     padding: 10px 30px 10px;
 }
 
@@ -63,14 +115,16 @@ footer{
 .footerNav ul {
         display: flex;
         justify-content: center;
+        align-items: center;
 }
 
 .footerNav ul li {
     color: black;   
     margin: 20px;
-    font-size: 20px;
+    font-size: 24px;
     opacity: 0.6;
-    transition: 0.5s;
+    transition: 0.5s;font-weight: 400;
+    font-family: 'JetBrains Mono', sans-serif;
 }
 
 .footerNav ul li:hover{

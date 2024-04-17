@@ -62,12 +62,16 @@ function renderGoogleSearch(data) {
     console.log(data);
     for (var i = 0; i < data.items.length; i++) {
         let item = data.items[i];
-        googleSearchEl.innerHTML += `
-        <div class = "ml-5 ">
-            <h2>${data.items[i].title}</h2>
-            <a href="${data.items[i].formattedUrl}">${data.items[i].link}</a>
-        </div>
-        `
+            googleSearchEl.innerHTML += `
+            <div class="card">  
+                <div class="card-header m-2 text-3xl text-wrap">
+                    <h2>${data.items[i].title}</h2>
+                </div>
+                <div class="card-body m-2 text-lg text-wrap">
+                    <a href="${data.items[i].formattedUrl}">${data.items[i].link}</a>
+                </div>
+            </div>
+            `
     }
 }
 
