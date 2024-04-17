@@ -1,11 +1,78 @@
+:root {
+    --gray: #545454;
+    --slate: #69747c;
+    --Asparagus: #6baa75;
+    --green: #84dd63;
+    --lime: #cbff4d;
+}
+
+header {
+    background-color: var(--slate);
+}
+
+header .header-container {
+}
+
+header h1 {
+    color: var(--green)
+}
+
+#gitHubIcon {
+    display: flex;
+    justify-content: end;
+    
+}
+
+main {
+    background-color: white; 
+    position: relative;
+    min-height: 100vh;
+}
+
+.code-scout-logo{
+    height: 100%;
+    display: table;
+    width: 100%;
+}
+
+.code-scout-logo h1{
+    color: var(--green);
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'JetBrains Mono', sans-serif;
+}
 
 .submitbtn{
     cursor: pointer;
 }
 .submitbtn:hover{
-    color:rgb(0, 255, 136);
+    color: var(--green)
 }
-.hyper li{
-    list-style-type: none;
+
+.footerContainer {
     
+    padding: 10px 30px 10px;
+}
+
+footer{
+    width: 100%;
+    bottom: 0;
+    background-color: var(--green);
+}
+
+.footerNav ul {
+        display: flex;
+        justify-content: center;
+}
+
+.footerNav ul li {
+    color: black;   
+    margin: 20px;
+    font-size: 20px;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.footerNav ul li:hover{
+    opacity: 1;
 }
