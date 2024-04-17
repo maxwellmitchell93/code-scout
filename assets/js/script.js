@@ -74,7 +74,7 @@ function renderYoutubeVideo(data) {
     for(let i= 0; i< videos.length; i++) {
         youtubeContainerEl.innerHTML += ` 
             <h3>${videos[i].snippet.title}</h3>
-            <a href="https://www.youtube.com/watch?v=${videos[i].id.videoId}"><img src = "${videos[i].snippet.thumbnails.default.url}"/></a>
+            <a href="https://www.youtube.com/watch?v=${videos[i].id.videoId}"><img src = "${videos[i].snippet.thumbnails.medium.url}"/></a>
         `
     }
 }
