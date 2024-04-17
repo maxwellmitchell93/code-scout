@@ -56,14 +56,15 @@ function youtubeApi(search) {
 function renderGoogleSearch(data) {
     googleSearchEl.innerHTML= "";
     //render googles search links on page
+    console.log(data);
     for (var i = 0; i < data.items.length; i++) {
         let item = data.items[i];
-        // Make sure HTML in item.htmlTitle is escaped.
-        document.querySelector(".google-search-input").append(
-          document.createElement("br"),
-          document.createTextNode(item.title),
-        );
-        $('<a href="'+item.formattedUrl+'">'+item.link+'</a>').appendTo($('.google-search-input'));
+        googleSearchEl.innerHTML += `
+        <div>
+            <h2>${data.items[i].title}</h2>
+            <a href="${data.items[i].formattedUrl}">${data.items[i].link}</a>
+        </div>
+        `
     }
 }
 
