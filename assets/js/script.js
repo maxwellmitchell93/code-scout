@@ -3,6 +3,7 @@ const userInputEl = document.querySelector('#issueinput');
 const searchFormEl = document.querySelector('#searchForm');
 const googleSearchEl = document.querySelector('.google-search-input');
 const youtubeContainerEl = document.querySelector('.youtube-container');
+const issueInputEl = document.querySelector('#issueinput');
 const googleApiKey = 'AIzaSyCiWEy9xURJ4OigfMcWMfi22poa1cD3kew'
 const youtubeApiKey = 'AIzaSyCmgmCqfy810RN_DSYuppQL0stf-5exBaU'
 
@@ -16,6 +17,7 @@ function handleSubmitForm(event) {
         //call another function
         googleApi(searchInputVal);
         youtubeApi(searchInputVal);
+        issueInputEl.value = '';
     } else {
         alert('Please enter a topic');
     }
@@ -60,12 +62,16 @@ function renderGoogleSearch(data) {
     console.log(data);
     for (var i = 0; i < data.items.length; i++) {
         let item = data.items[i];
-        googleSearchEl.innerHTML += `
-        <div>
-            <h2>${data.items[i].title}</h2>
-            <a href="${data.items[i].formattedUrl}">${data.items[i].link}</a>
-        </div>
-        `
+            googleSearchEl.innerHTML += `
+            <div class="card">  
+                <div class="card-header m-2 text-3xl text-wrap">
+                    <h2>${data.items[i].title}</h2>
+                </div>
+                <div class="card-body m-2 text-lg text-wrap">
+                    <a href="${data.items[i].formattedUrl}">${data.items[i].link}</a>
+                </div>
+            </div>
+            `
     }
 }
 
@@ -75,8 +81,10 @@ function renderYoutubeVideo(data) {
     console.log(videos);
     for(let i= 0; i< videos.length; i++) {
         youtubeContainerEl.innerHTML += ` 
+            <div class = "mb-5 grow">
             <h3>${videos[i].snippet.title}</h3>
-            <iframe class="w-full h-36" src="https://www.youtube.com/embed/${videos[i].id.videoId}" frameborder="0" allowfullscreen></iframe>
+            <iframe style="border: 0; width:100%; height: 400px; overflow: auto;" class="w-full h-36" src="https://www.youtube.com/embed/${videos[i].id.videoId}" frameborder="0" allowfullscreen></iframe>
+            <div>
         `
     }
 }
