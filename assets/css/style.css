@@ -10,8 +10,7 @@ header {
     background-color: var(--slate);
 }
 
-header .header-container {
-}
+
 
 header h1 {
     color: var(--green)
